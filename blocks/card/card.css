@@ -1,0 +1,40 @@
+.card.block > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 24px;
+}
+
+.card.block > div > div {
+  background: #f2eeee;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.block img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.card.block h3 {
+  margin: 10px 0 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #bc591c;
+}
+
+.card.block h3[id^="price"] {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #c9a24d;
+}
+
+.card.block > div > div:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+}

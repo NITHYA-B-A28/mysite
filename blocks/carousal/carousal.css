@@ -1,0 +1,49 @@
+/* ===== CAROUSAL ===== */
+.carousal {
+  margin-top: 90px;
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousal-slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  will-change: transform;
+}
+
+.carousal-slider picture {
+  flex: 0 0 100vw;
+}
+
+.carousal-slider img {
+  width: 100vw;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.carousal-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 12px 16px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.carousal-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousal-btn.left {
+  left: 20px;
+}
+
+.carousal-btn.right {
+  right: 20px;
+}

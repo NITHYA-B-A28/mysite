@@ -1,0 +1,78 @@
+/* --------------------
+   Tips Block
+--------------------- */
+
+.tips {
+  margin: 40px 0;
+}
+
+.tips > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Each card */
+.tips > div > div {
+background: #f2eeee;  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tips > div > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+/* --------------------
+   Fix image + title overlap
+--------------------- */
+
+/* First paragraph = image + title */
+.tips > div > div > p:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+}
+
+/* Image wrapper */
+.tips picture {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Image */
+.tips img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Title text (inside first <p>) */
+.tips > div > div > p:first-of-type {
+  font-weight: 600;
+  font-size: 1rem;
+   color: #bc591c;
+}
+
+/* --------------------
+   Story text
+--------------------- */
+
+.tips > div > div > p:last-of-type {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  /* color: #444; */
+  margin: 0;
+}
+
